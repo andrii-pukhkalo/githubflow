@@ -1,4 +1,9 @@
 workflow: GitHubFlow/v1
+mode: ContinuousDelivery
+commit-message-incrementing: Disabled
+tag-prefix: '[vV]?'
+merge-message-formats:
+  github: '^Merge pull request #(?<PullRequestNumber>\d+) from (?<SourceBranch>.+)'
 
 branches:
   main:
