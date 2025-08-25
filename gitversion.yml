@@ -1,0 +1,17 @@
+workflow: GitHubFlow/v1
+
+branches:
+  main:
+    regex: ^master$|^main$
+    is-main-branch: true
+    label: ''
+    increment: Patch
+    prevent-increment:
+      of-merged-branch: false
+    track-merge-message: true
+    
+  feature:
+    regex: ^(feature|feat|fix|chore|refactor)[\/-](?<BranchName>.+)
+    label: alpha                        
+    increment: Minor
+    track-merge-message: true
